@@ -48,7 +48,7 @@ function M.getenv(elem, ident,...)
   local currentenv ={}
   for k,v in pairs(M.env) do currentenv[k] = v end
   if elem and elem.tag then
-    print(elem.tag)
+    --print(elem.tag)
     currentenv['_'..elem.tag]= elem
   end
   currentenv['i']= ident or 1
