@@ -34,7 +34,7 @@ function M.applytemplate(elem, ident, templatetype,...)
 
   -- apply template
   local str, err = pltemplate.substitute(template, env)
-  print(string.format("Template = $s",template))
+  print(string.format("Template = %s",template))
   --manage errors
   if not str then
     local templateerror = templatetype and string.format(' parsing "%s" template ', templatetype) or ''
