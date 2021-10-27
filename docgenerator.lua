@@ -33,6 +33,7 @@ function M.generatedocforfiles(filenames, cssname,noheuristic)
   local wrongfiles = {}
   for _, filename in pairs( filenames ) do
     -- Load file content
+    print(filename)
     local file, error = io.open(filename, 'r')
     if not file then return nil, 'Unable to read "'..filename..'"\n'..err end
     local code = file:read('*all')
