@@ -123,8 +123,10 @@ local defaultenv = {
   purelinkto    = purelinkto,
   fulllinkto    = fulllinkto,
   prettyname    = function(s) return s end,
-  getelement    = function(s) return nil end
+  getelement    = function(s) return nil end,
+  _debug        = true,
 }
+
 
 -- this is the global env accessible in the templates
 -- env should be redefine by docgenerator user to add functions or redefine it.
