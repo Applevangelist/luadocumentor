@@ -79,7 +79,7 @@ return [[#
 #  end 
 #  if typedef.supertype then
 #    local modulename = typedef.supertype.modulename
-#    if modulename then 
+#    if modulename and modules then 
 #      local file = modules[modulename]
 #      if file then
 #        local supertypedef = file.types[typedef.supertype.typename]
