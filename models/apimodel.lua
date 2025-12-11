@@ -188,7 +188,7 @@ function M._item(name)
           if not file then
             if self.parent and self.parent.tag == 'recordtypedef' then
               file = self.parent.parent
-            elseif self.parent.tag == 'file' then
+            elseif self.parent and self.parent.tag == 'file' then
               file = self.parent
             end
           end
