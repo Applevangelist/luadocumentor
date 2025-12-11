@@ -83,13 +83,15 @@ return [[#
 #      local file = modules[modulename]
 #      if file then
 #        local supertypedef = file.types[typedef.supertype.typename]
-#        supertypedef.originalname = supertypedef.name
-#        supertypedef.name = name
-#        supertypedef.originallink = fulllinkto( typedef.supertype )
-#        inherittype( supertypedef, name, supertypedef.originallink )
-#        supertypedef.name = supertypedef.originalname
-#        supertypedef.originalname = nil
-#        supertypedef.originallink = nil
+#        if supertypedef then
+#          supertypedef.originalname = supertypedef.name
+#          supertypedef.name = name
+#          supertypedef.originallink = fulllinkto( typedef.supertype )
+#          inherittype( supertypedef, name, supertypedef.originallink )
+#          supertypedef.name = supertypedef.originalname
+#          supertypedef.originalname = nil
+#          supertypedef.originallink = nil
+#        end
 #      end
 #    end
 #  end
