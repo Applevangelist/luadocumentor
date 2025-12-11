@@ -58,11 +58,13 @@ return [[#
 #         local file = modules[modulename]
 #         if file then
 #           local itypedef = file.types[typedef.supertype.typename]
-#           itypedef.originalname = itypedef.name
-#           itypedef.name = name
-#           inherittype( itypedef, name, itypedef.originalname )
-#           itypedef.name = itypedef.originalname
-#           itypedef.inheritedname = nil
+#           if itypedef then
+#              itypedef.originalname = itypedef.name
+#              itypedef.name = name
+#              inherittype( itypedef, name, itypedef.originalname )
+#              itypedef.name = itypedef.originalname
+#              itypedef.inheritedname = nil
+#           end
 #         end
 #       end
 #     end
